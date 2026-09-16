@@ -11,335 +11,248 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
-            background-color: #f8f9fa;
+            background-color: #fcfcfc;
             color: #333;
         }
-
         header {
-            background-color: #111;
-            color: #fff;
+            background-color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 40px 20px;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
-
-        header h1 {
-            font-size: 2.5rem;
+        .logo-title {
+            font-size: 28px;
+            font-weight: bold;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #111;
         }
-
-        header p {
-            font-size: 1.1rem;
-            color: #ccc;
+        .tagline {
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
         }
-
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        .section-title {
+        .collection-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            margin: 40px 0 20px 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             position: relative;
             padding-bottom: 10px;
         }
-
-        .section-title::after {
+        .collection-title::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #111;
+            width: 50px;
+            height: 2px;
+            background-color: #333;
         }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+        .product-grid {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
         }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            background-color: #eaeaea;
-        }
-
-        .product-info {
+        .card {
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: 8px;
+            width: 320px;
             padding: 20px;
             text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
         }
-
-        .product-title {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .product-price {
-            font-size: 1.2rem;
-            color: #b12704;
-            font-weight: bold;
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
             margin-bottom: 15px;
         }
-
-        .whatsapp-btn {
-            display: inline-block;
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 15px;
+        }
+        .btn-wa {
             background-color: #25D366;
             color: white;
-            text-decoration: none;
             padding: 10px 20px;
+            text-decoration: none;
             border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(37,211,102,0.2);
         }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
+        .btn-wa svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+            margin-right: 8px;
         }
-
+        
+        /* New Left Layout Styling */
+        .product-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            margin-bottom: 50px;
+        }
+        .row-left {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 15px;
+            text-align: center;
+        }
+        .row-left img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .row-right {
+            flex: 1;
+            min-width: 300px;
+            max-width: 550px;
+            padding: 15px;
+            text-align: left;
+        }
+        .badge {
+            background-color: #2c3e50;
+            color: white;
+            padding: 3px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        .row-right h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #111;
+        }
+        .details-list {
+            list-style-type: square;
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .price-section {
+            margin-bottom: 20px;
+        }
+        .old-price {
+            color: #777;
+            text-decoration: line-through;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+        .new-price {
+            font-weight: bold;
+            font-size: 24px;
+            color: #c0392b;
+        }
+        .wholesale-tag {
+            font-size: 12px;
+            color: #27ae60;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .btn-wa-large {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+        }
+        .btn-wa-large svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+            margin-right: 8px;
+        }
         footer {
             background-color: #111;
             color: #fff;
             text-align: center;
             padding: 20px;
+            font-size: 13px;
             margin-top: 60px;
-            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>AL-SYED COLLECTION</h1>
-        <p>Premium Quality Clothing Brand</p>
+        <div class="logo-title">Al-Syed Collection</div>
+        <div class="tagline">Premium Clothing Brand | Exclusive Winter Collection</div>
     </header>
 
     <div class="container">
-        <h2 class="section-title">Exclusive Winter Collection</h2>
-        <p style="text-align: center; margin-top: -30px; margin-bottom: 40px; color: #666;">Elevate your style with our premium luxury clothing line.</p>
-
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="suit-a-image.jpg" alt="Batik Luxury Winter Suit Front" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Batik Luxury Winter Suit (Style A - Front View)</h3>
-                    <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="suit-b-image.jpg" alt="Batik Luxury Winter Suit Sitting" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Batik Luxury Winter Suit (Style B - Model View)</h3>
-                    <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="suit-c-image.jpg" alt="Batik Luxury Winter Suit Full View" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Batik Luxury Winter Suit (Style C - Full Length)</h3>
-                    <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="suit-d-image.jpg" alt="Batik Unstitched Fabric Details" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Batik Airjet Dhanak Fabric (Unstitched Open Pack)</h3>
-                    <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 AL-SYED COLLECTION. All Rights Reserved. | Managed by Syed Shujaat Ali</p>
-    </footer>
-
-</body>
-</html>
-<!-- MARIA.B LUXURY SILK COLLECTION START -->
-<section class="maria-b-collection" style="margin-top: 50px; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1200px; margin-left: auto; margin-right: auto;">
-    
-    <!-- Section Heading -->
-    <div style="text-align: center; margin-bottom: 40px; border-bottom: 2px solid #f1f1f1; padding-bottom: 15px;">
-        <h2 style="font-size: 30px; color: #111; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px;">Maria.B Luxury Silk Collection</h2>
-        <p style="color: #e67e22; font-weight: bold; margin-top: 0;">Most Viral Article of the Year 2026</p>
-    </div>
-
-    <!-- Product Row (Left Photo Layout) -->
-    <div class="product-row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; background-color: #fafafa; border-radius: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         
-        <!-- Left Side: Image -->
-        <div style="flex: 1; min-width: 320px; max-width: 500px; padding: 15px; text-align: center;">
-            <img src="images/maria-b-silk.jpg" alt="Maria.B Luxury Shamoz Silk" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-        </div>
-        
-        <!-- Right Side: Details & WhatsApp Button -->
-        <div style="flex: 1; min-width: 320px; max-width: 550px; padding: 15px;">
-            <span style="background-color: #2c3e50; color: white; padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 3px; text-transform: uppercase;">Brand New</span>
-            <h3 style="font-size: 26px; margin-top: 10px; margin-bottom: 15px; color: #222; font-weight: 700;">Premium Shamoz Silk Embroidered Suit</h3>
+        <!-- ORIGINAL BATIK COLLECTION -->
+        <h2 class="collection-title">Batik Luxury Winter Collection</h2>
+        <div class="product-grid">
             
-            <!-- Fabric Details List -->
-            <ul style="list-style-type: square; padding-left: 20px; color: #555; line-height: 1.8; font-size: 15px; margin-bottom: 25px;">
-                <li>Premium Shamoz Silk with Heavy Embroidered Front</li>
-                <li>Heavy Embroidered Chowk Lace (For Both Sides)</li>
-                <li>Premium Shamoz Silk Sleeves with Heavy Embroidered Cuff Patch</li>
-                <li>Fully Heavy Alternate Embroidered Cuff Patch</li>
-                <li>Heavy Embroidered Premium Shamoz Silk Back</li>
-                <li>Heavy Embroidered Premium Shamoz Silk Trouser</li>
-                <li>High Quality Soft Heavy Embroidered Organza Dupatta with Finest Cutwork 4-Sided Border</li>
-            </ul>
-            
-            <!-- Price Display -->
-            <div style="margin-bottom: 25px;">
-                <span style="color: #777; text-decoration: line-through; font-size: 16px; margin-right: 10px;">Rs. 6,500</span>
-                <span style="font-weight: bold; font-size: 28px; color: #c0392b;">Rs. 4,750</span>
-                <span style="font-size: 12px; color: #27ae60; font-weight: bold; margin-left: 10px;">(Wholesale Price)</span>
-            </div>
-            
-            <!-- WhatsApp Order Button WITH YOUR NUMBER -->
-            <a href="https://wa.me" 
-               target="_blank" 
-               style="background-color: #25D366; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: 0.3s;">
-               <img src="https://wikimedia.org" alt="WA" style="width: 20px; vertical-align: middle; margin-right: 8px; filter: brightness(0) invert(1);"> Order via WhatsApp
-            </a>
-        </div>
-
-    </div>
-
-</section>
-<!-- MARIA.B LUXURY SILK COLLECTION END -->
-<!-- MARIA.B LUXURY SILK COLLECTION START -->
-<section class="maria-b-collection" style="margin-top: 50px; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1200px; margin-left: auto; margin-right: auto; text-align: left;">
-    
-    <!-- Section Heading -->
-    <div style="text-align: center; margin-bottom: 40px; border-bottom: 2px solid #f1f1f1; padding-bottom: 15px;">
-        <h2 style="font-size: 30px; color: #111; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px;">Maria.B Luxury Silk Collection</h2>
-        <p style="color: #e67e22; font-weight: bold; margin-top: 0;">Most Viral Article of the Year 2026</p>
-    </div>
-
-    <!-- Product Row (Left Photo Layout) -->
-    <div class="product-row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; background-color: #fafafa; border-radius: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-        
-        <!-- Left Side: Image (GitHub par pehle se maujood file ka naam direct use kiya hai) -->
-        <div style="flex: 1; min-width: 320px; max-width: 500px; padding: 15px; text-align: center;">
-            <img src="maria-b-silk.jpg" alt="Maria.B Luxury Shamoz Silk" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-        </div>
-        
-        <!-- Right Side: Details & WhatsApp Button -->
-        <div style="flex: 1; min-width: 320px; max-width: 550px; padding: 15px;">
-            <span style="background-color: #2c3e50; color: white; padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 3px; text-transform: uppercase;">Brand New</span>
-            <h3 style="font-size: 26px; margin-top: 10px; margin-bottom: 15px; color: #222; font-weight: 700;">Premium Shamoz Silk Embroidered Suit</h3>
-            
-            <!-- Fabric Details List -->
-            <ul style="list-style-type: square; padding-left: 20px; color: #555; line-height: 1.8; font-size: 15px; margin-bottom: 25px; text-align: left;">
-                <li>Premium Shamoz Silk with Heavy Embroidered Front</li>
-                <li>Heavy Embroidered Chowk Lace (For Both Sides)</li>
-                <li>Premium Shamoz Silk Sleeves with Heavy Embroidered Cuff Patch</li>
-                <li>Fully Heavy Alternate Embroidered Cuff Patch</li>
-                <li>Heavy Embroidered Premium Shamoz Silk Back</li>
-                <li>Heavy Embroidered Premium Shamoz Silk Trouser</li>
-                <li>High Quality Soft Heavy Embroidered Organza Dupatta with Finest Cutwork 4-Sided Border</li>
-            </ul>
-            
-            <!-- Price Display -->
-            <div style="margin-bottom: 25px; text-align: left;">
-                <span style="color: #777; text-decoration: line-through; font-size: 16px; margin-right: 10px;">Rs. 6,500</span>
-                <span style="font-weight: bold; font-size: 28px; color: #c0392b;">Rs. 4,750</span>
-                <span style="font-size: 12px; color: #27ae60; font-weight: bold; margin-left: 10px;">(Wholesale Price)</span>
-            </div>
-            <!-- MARIA.B LUXURY SILK COLLECTION START -->
-<section class="maria-b-collection" style="margin-top: 50px; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1200px; margin-left: auto; margin-right: auto; text-align: left;">
-    
-    <!-- Section Heading -->
-    <div style="text-align: center; margin-bottom: 40px; border-bottom: 2px solid #f1f1f1; padding-bottom: 15px;">
-        <h2 style="font-size: 30px; color: #111; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px;">Maria.B Luxury Silk Collection</h2>
-        <p style="color: #e67e22; font-weight: bold; margin-top: 0;">Most Viral Article of the Year 2026</p>
-    </div>
-
-    <!-- Product Row (Left Photo Layout) -->
-    <div class="product-row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; background-color: #fafafa; border-radius: 8px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-        
-        <!-- Left Side: Image (Direct Link fixed without images/ folder) -->
-        <div style="flex: 1; min-width: 320px; max-width: 500px; padding: 15px; text-align: center;">
-            <img src="maria-b-silk.jpg" alt="Maria.B Luxury Shamoz Silk" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: block; margin: 0 auto;">
-        </div>
-        
-        <!-- Right Side: Details & WhatsApp Button -->
-        <div style="flex: 1; min-width: 320px; max-width: 550px; padding: 15px;">
-            <span style="background-color: #2c3e50; color: white; padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 3px; text-transform: uppercase;">Brand New</span>
-            <h3 style="font-size: 26px; margin-top: 10px; margin-bottom: 15px; color: #222; font-weight: 700;">Premium Shamoz Silk Embroidered Suit</h3>
-            
-            <!-- Fabric Details List -->
-            <ul style="list-style-type: square; padding-left: 20px; color: #555; line-height: 1.8; font-size: 15px; margin-bottom: 25px; text-align: left;">
-                <li>Premium Shamoz Silk with Heavy Embroidered Front</li>
-                <li>Heavy Embroidered Chowk Lace (For Both Sides)</li>
-                <li>Premium Shamoz Silk Sleeves with Heavy Embroidered Cuff Patch</li>
-                <li>Fully Heavy Alternate Embroidered Cuff Patch</li>
-                <li>Heavy Embroidered Premium Shamoz Silk Back</li>
-                <li>Heavy Embroidered Premium Shamoz Silk Trouser</li>
-                <li>High Quality Soft Heavy Embroidered Organza Dupatta with Finest Cutwork 4-Sided Border</li>
-            </ul>
-            
-            <!-- Price Display -->
-            <div style="margin-bottom: 25px; text-align: left;">
-                <span style="color: #777; text-decoration: line-through; font-size: 16px; margin-right: 10px;">Rs. 6,500</span>
-                <span style="font-weight: bold; font-size: 28px; color: #c0392b;">Rs. 4,750</span>
-                <span style="font-size: 12px; color: #27ae60; font-weight: bold; margin-left: 10px;">(Wholesale Price)</span>
-            </div>
-            
-            <!-- Fixed WhatsApp Order Button -->
-            <div style="text-align: left;">
-                <a href="https://wa.me" 
-                   target="_blank" 
-                   style="background-color: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: 0.3s; width: auto;">
-                   <svg viewBox="0 0 448 512" style="width: 20px; height: 20px; fill: white; margin-right: 10px;" xmlns="http://w3.org">
-                       <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-                   </svg>
-                   Order via WhatsApp
+            <!-- Style A -->
+            <div class="card">
+                <img src="suit-a-image.jpg" alt="Batik Luxury Winter Suit Style A">
+                <h3>Batik Luxury Winter Suit<br>(Style A - Front View)</h3>
+                <div class="price">Rs. 4,800</div>
+                <a href="https://wa.me" target="_blank" class="btn-wa">
+                    <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    Order via WhatsApp
                 </a>
             </div>
-        </div>
 
-    </div>
+            <!-- Style B -->
+            <div class="card">
+                <img src="suit-b-image.jpg" alt="Batik Luxury Winter Suit Style B">
+                <h3>Batik Luxury Winter Suit<br>(Style B - Model View)</h3>
+                <div class="price">Rs. 4,800</div>
+                <a href="https://wa.me" target="_blank" class="btn-wa">
+                    <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    Order via WhatsApp
+                </a>
+            </div>
 
-</section>
-<!-- MARIA.B LUXURY SILK COLLECTION END -->
-
+            <!-- Style C -->
+            <div class="card">
+                <img src="suit-c-image.jpg" alt="Batik Luxury Winter Suit Style C">
+                <h3>Batik Luxury Winter Suit<br>(Style C - Full Length)</h3>
+                <div class="price">Rs. 4,800</div>
+                <a href="https://wa.me" target="_blank" class="btn-wa">
