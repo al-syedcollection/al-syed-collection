@@ -3,45 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Search (SEO) Tags -->
     <title>AL-SYED COLLECTION | Premium Clothing Brand</title>
-    <meta name="description" content="Welcome to AL-SYED COLLECTION managed by Syed Shujaat Ali. Discover premium quality clothing, luxury winter collections, Batik suits, LAAM designer wear, and exclusive wedding wear at best prices in Pakistan. Order easily via WhatsApp.">
-    <meta name="keywords" content="Al-Syed Collection, Al Syed Collection, Syed Shujaat Ali, Batik Luxury Winter Suit, DHK-677, LAAM 2219, Premium Clothing Brand, Online Suits Pakistan, Order via WhatsApp Clothing">
-    <meta name="author" content="Syed Shujaat Ali">
-    <meta name="robots" content="index, follow">
-
     <style>
-        /* Premium Gold & Black Theme Styles */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #fcfbf7; color: #222; }
-        header { background-color: #111; color: #d4af37; padding: 20px; text-align: center; border-bottom: 3px solid #d4af37; position: sticky; top: 0; z-index: 1000; }
-        header h1 { font-size: 2.2rem; letter-spacing: 2px; }
-        header p { color: #fff; font-size: 0.9rem; margin-top: 5px; }
-        
-        /* Premium Banner Background */
-        .hero { background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://unsplash.com') no-repeat center center/cover; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; }
-        .hero h2 { font-size: 2.5rem; color: #d4af37; margin-bottom: 10px; }
-        
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 30px; font-size: 1.8rem; position: relative; padding-bottom: 10px; }
-        .section-title::after { content: ''; width: 60px; height: 3px; background-color: #d4af37; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-        
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-10px); }
-        
-        .product-img { width: 100%; height: 420px; background-color: #eaeaea; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .product-img img { width: 100%; height: 100%; object-fit: cover; }
-        
-        .product-info { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: #111; min-height: 44px; display: flex; align-items: center; justify-content: center; }
-        .product-price { color: #d4af37; font-size: 1.3rem; font-weight: bold; margin-bottom: 15px; }
-        
-        .whatsapp-btn { background-color: #25d366; color: white; border: none; padding: 12px; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
-        .whatsapp-btn:hover { background-color: #128c7e; }
-        
-        footer { background-color: #000; color: #888; text-align: center; padding: 20px; font-size: 0.9rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #111;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background-color: #eaeaea;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #b12704;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -51,68 +141,48 @@
         <p>Premium Quality Clothing Brand</p>
     </header>
 
-    <section class="hero">
-        <h2>Exclusive Winter Collection</h2>
-        <p>Elevate your style with our premium luxury clothing line.</p>
-    </section>
-
     <div class="container">
-        <h3 class="section-title">Batik Luxury Winter Collection</h3>
-        
+        <h2 class="section-title">Exclusive Winter Collection</h2>
+        <p style="text-align: center; margin-top: -30px; margin-bottom: 40px; color: #666;">Elevate your style with our premium luxury clothing line.</p>
+
         <div class="products-grid">
-            <!-- Product 1: Front View -->
+            <!-- Product 1 -->
             <div class="product-card">
-                <div class="product-img">
-                    <img src="https://ibb.co" alt="Batik Luxury Winter Suit Front">
-                </div>
+                <img src="suit-a-image.jpg" alt="Batik Luxury Winter Suit Front" class="product-image">
                 <div class="product-info">
-                    <div class="product-name">Batik Luxury Winter Suit (Style A - Front View)</div>
+                    <h3 class="product-title">Batik Luxury Winter Suit (Style A - Front View)</h3>
                     <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
+                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Product 2: Sitting View -->
+            <!-- Product 2 -->
             <div class="product-card">
-                <div class="product-img">
-                    <img src="https://ibb.co" alt="Batik Luxury Winter Suit Sitting">
-                </div>
+                <img src="suit-b-image.jpg" alt="Batik Luxury Winter Suit Sitting" class="product-image">
                 <div class="product-info">
-                    <div class="product-name">Batik Luxury Winter Suit (Style B - Model View)</div>
+                    <h3 class="product-title">Batik Luxury Winter Suit (Style B - Model View)</h3>
                     <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
+                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Product 3: Full Length View -->
+            <!-- Product 3 -->
             <div class="product-card">
-                <div class="product-img">
-                    <img src="https://ibb.co" alt="Batik Luxury Winter Suit Full View">
-                </div>
+                <img src="suit-c-image.jpg" alt="Batik Luxury Winter Suit Full View" class="product-image">
                 <div class="product-info">
-                    <div class="product-name">Batik Luxury Winter Suit (Style C - Full Length)</div>
+                    <h3 class="product-title">Batik Luxury Winter Suit (Style C - Full Length)</h3>
                     <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
+                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Product 4: Unstitched Pack Layout -->
+            <!-- Product 4 -->
             <div class="product-card">
-                <div class="product-img">
-                    <img src="https://ibb.co" alt="Batik Unstitched Fabric Details">
-                </div>
+                <img src="suit-d-image.jpg" alt="Batik Unstitched Fabric Details" class="product-image">
                 <div class="product-info">
-                    <div class="product-name">Batik Airjet Dhanak Fabric (Unstitched Open Pack)</div>
+                    <h3 class="product-title">Batik Airjet Dhanak Fabric (Unstitched Open Pack)</h3>
                     <div class="product-price">Rs. 4,800</div>
-                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
+                    <a href="https://wa.me" target="_blank" class="whatsapp-btn">Order via WhatsApp</a>
                 </div>
             </div>
         </div>
