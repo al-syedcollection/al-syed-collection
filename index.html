@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
             background-color: #fcfcfc;
@@ -21,6 +21,7 @@
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
         .logo-title {
             font-size: 28px;
@@ -42,105 +43,87 @@
         .collection-title {
             text-align: center;
             margin: 40px 0 20px 0;
-            font-size: 24px;
+            font-size: 26px;
             text-transform: uppercase;
             letter-spacing: 1px;
             padding-bottom: 10px;
             border-bottom: 2px solid #333;
-            display: inline-block;
             width: 100%;
-        }
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        .card {
-            background: #fff;
-            border: 1px solid #f0f0f0;
-            border-radius: 8px;
-            width: 320px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-        .card h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        .price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #c0392b;
-            margin-bottom: 15px;
-        }
-        .btn-wa {
-            background-color: #25D366;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: block;
-            font-weight: bold;
-            font-size: 14px;
-            text-align: center;
         }
         
-        /* Maria.B Section Layout */
+        /* Product Row Styling */
         .product-row {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             background-color: #fff;
             border: 1px solid #f0f0f0;
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 60px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
         .row-left {
             flex: 1;
-            min-width: 300px;
-            max-width: 450px;
-            padding: 15px;
+            min-width: 320px;
+            max-width: 480px;
+            padding: 10px;
             text-align: center;
         }
-        .row-left img {
+        .main-img {
             width: 100%;
             height: auto;
             border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        .thumb-container {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .thumb-container img {
+            width: 70px;
+            height: 85px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .thumb-container img:hover {
+            border-color: #333;
+            transform: scale(1.05);
         }
         .row-right {
             flex: 1;
-            min-width: 300px;
-            max-width: 550px;
-            padding: 15px;
+            min-width: 320px;
+            max-width: 580px;
+            padding: 10px 20px;
             text-align: left;
         }
         .badge {
             background-color: #2c3e50;
             color: white;
-            padding: 3px 8px;
+            padding: 4px 10px;
             font-size: 11px;
             font-weight: bold;
             border-radius: 3px;
             text-transform: uppercase;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .row-right h3 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 5px;
             color: #111;
+        }
+        .item-code {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
         .details-list {
             list-style-type: square;
@@ -148,24 +131,18 @@
             color: #555;
             line-height: 1.8;
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .price-section {
-            margin-bottom: 20px;
-        }
-        .old-price {
-            color: #777;
-            text-decoration: line-through;
-            font-size: 15px;
-            margin-right: 10px;
+            margin-bottom: 25px;
         }
         .new-price {
             font-weight: bold;
-            font-size: 24px;
+            font-size: 28px;
             color: #c0392b;
         }
         .wholesale-tag {
-            font-size: 12px;
+            font-size: 13px;
             color: #27ae60;
             font-weight: bold;
             margin-left: 5px;
@@ -173,12 +150,14 @@
         .btn-wa-large {
             background-color: #25D366;
             color: white;
-            padding: 12px 25px;
+            padding: 14px 30px;
             text-decoration: none;
             border-radius: 5px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(37,211,102,0.2);
         }
         footer {
             background-color: #111;
@@ -186,7 +165,7 @@
             text-align: center;
             padding: 20px;
             font-size: 13px;
-            margin-top: 40px;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -199,67 +178,45 @@
 
     <div class="container">
         
-        <!-- ORIGINAL BATIK COLLECTION -->
-        <h2 class="collection-title">Batik Luxury Winter Collection</h2>
-        <div class="product-grid">
-            
-            <!-- Style A -->
-            <div class="card">
-                <img src="suit-a-image.jpg" alt="Batik Luxury Winter Suit Style A">
-                <h3>Batik Luxury Winter Suit<br>(Style A - Front View)</h3>
-                <div class="price">Rs. 4,800</div>
-                <a href="https://wa.me" target="_blank" class="btn-wa">
-                    Order via WhatsApp
-                </a>
-            </div>
-
-            <!-- Style B -->
-            <div class="card">
-                <img src="suit-b-image.jpg" alt="Batik Luxury Winter Suit Style B">
-                <h3>Batik Luxury Winter Suit<br>(Style B - Model View)</h3>
-                <div class="price">Rs. 4,800</div>
-                <a href="https://wa.me" target="_blank" class="btn-wa">
-                    Order via WhatsApp
-                </a>
-            </div>
-
-            <!-- Style C -->
-            <div class="card">
-                <img src="suit-c-image.jpg" alt="Batik Luxury Winter Suit Style C">
-                <h3>Batik Luxury Winter Suit<br>(Style C - Full Length)</h3>
-                <div class="price">Rs. 4,800</div>
-                <a href="https://wa.me" target="_blank" class="btn-wa">
-                    Order via WhatsApp
-                </a>
-            </div>
-        </div>
-            
-        <!-- MARIA.B COLLECTION -->
-        <h2 class="collection-title">Maria.B Luxury Silk Collection</h2>
+        <!-- BAREEZE WINTER COLLECTION SECTION -->
+        <h2 class="collection-title">Bareeze Luxury Winter Collection</h2>
+        
+        <!-- ARTICLE 1: BLACK (Bareeze 2705) -->
         <div class="product-row">
             <div class="row-left">
-                <!-- Absolute GitHub Link used to ensure the image loads -->
-                <img src="maria-b-silk.jpg" alt="Maria.B Luxury Shamoz Silk">
+                <!-- Main big image -->
+                <img id="main-black" src="bareeze-2705/image_Zrsds6.png" class="main-img" alt="Bareeze Black Main View">
+                <!-- Gallery Thumbnails -->
+                <div class="thumb-container">
+                    <img src="bareeze-2705/image_Zrsds6.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Model 1">
+                    <img src="bareeze-2705/image_jvm8R0.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Model 2">
+                    <img src="bareeze-2705/image_v8rjSE.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Model 3">
+                    <img src="bareeze-2705/image_u9EDjO.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Unstitched 1">
+                    <img src="bareeze-2705/image_Rz6Qdf.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Unstitched 2">
+                    <img src="bareeze-2705/image_toGEKJ.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Detail">
+                    <img src="bareeze-2705/image_R7QJ_1.png" onclick="document.getElementById('main-black').src=this.src" alt="Black Patch Detail">
+                </div>
             </div>
+            
             <div class="row-right">
-                <span class="badge">Brand New</span>
-                <h3>Premium Shamoz Silk Embroidered Suit</h3>
-                <p style="color: #e67e22; font-weight: bold; margin-bottom: 15px; font-size: 14px;">Most Viral Article of the Year 2026</p>
+                <span class="badge">Premium Airjet Dhanak</span>
+                <h3>Bareeze Embroidered 3-Piece Suit (Jet Black)</h3>
+                <div class="item-code">Article Code: Bareeze 2705</div>
                 
                 <ul class="details-list">
-                    <li>Premium Shamoz Silk with Heavy Embroidered Front</li>
-                    <li>Heavy Embroidered Chowk Lace (For Both Sides)</li>
-                    <li>Premium Shamoz Silk Sleeves with Heavy Embroidered Cuff Patch</li>
-                    <li>Fully Heavy Alternate Embroidered Cuff Patch</li>
-                    <li>Heavy Embroidered Premium Shamoz Silk Back</li>
-                    <li>Heavy Embroidered Premium Shamoz Silk Trouser</li>
-                    <li>High Quality Soft Heavy Embroidered Organza Dupatta with Finest Cutwork 4-Sided Border</li>
+                    <li><strong>Stuff:</strong> Best Quality Pure Airjet Dhanak (Full Procedure)</li>
+                    <li><strong>Shirt:</strong> Front Full Heavy Embroidered with fine premium thread work</li>
+                    <li><strong>Sleeves:</strong> Heavy Embroidered Dhanak Sleeves</li>
+                    <li><strong>Dupatta:</strong> Dhanak Heavy Embroidery Dupatta with 4-Sided borders (Ready to wear stitched)</li>
+                    <li><strong>Trouser:</strong> Dyed Pure Dhanak Plain Trouser</li>
+                    <li><strong>Patches:</strong> Daman & Neck heavy embroidery patches on premium Organza</li>
+                    <li>Premium Quality Product along with Original Catalog & Bag Packing</li>
+                    <li><em>After Wash Color & Fabric Guaranteed</em></li>
                 </ul>
                 
                 <div class="price-section">
-                    <span class="old-price">Rs. 6,500</span>
-                    <span class="new-price">Rs. 4,750</span>
-                    <span class="wholesale-tag">(Wholesale Price)</span>
+                    <span class="new-price">Rs. 7,800</span>
+                    <span class="wholesale-tag">(Wholesale Price - Excluded Delivery)</span>
                 </div>
                 
                 <a href="https://wa.me" target="_blank" class="btn-wa-large">
@@ -267,11 +224,29 @@
                 </a>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 Al-Syed Collection. All Rights Reserved. | Managed by Syed Shujaat Ali</p>
-    </footer>
-
-</body>
-</html>
+        <!-- ARTICLE 2: CREAM / OFF-WHITE (Bareeze 2723) -->
+        <div class="product-row">
+            <div class="row-left">
+                <!-- Main big image -->
+                <img id="main-cream" src="bareeze-2723/image_yDC0XK.png" class="main-img" alt="Bareeze Cream Main View">
+                <!-- Gallery Thumbnails -->
+                <div class="thumb-container">
+                    <img src="bareeze-2723/image_yDC0XK.png" onclick="document.getElementById('main-cream').src=this.src" alt="Cream Model">
+                    <img src="bareeze-2723/image_xUD_Bg.png" onclick="document.getElementById('main-cream').src=this.src" alt="Cream Unstitched Open">
+                    <img src="bareeze-2723/image_-UqrjM.png" onclick="document.getElementById('main-cream').src=this.src" alt="Cream Detailed View">
+                </div>
+            </div>
+            
+            <div class="row-right">
+                <span class="badge">Premium Airjet Dhanak</span>
+                <h3>Bareeze Embroidered 3-Piece Suit (Luxury Cream)</h3>
+                <div class="item-code">Article Code: Bareeze 2723</div>
+                
+                <ul class="details-list">
+                    <li><strong>Stuff:</strong> Best Quality Pure Airjet Dhanak (Full Procedure)</li>
+                    <li><strong>Shirt:</strong> Front Full Heavy Embroidered with elegant design</li>
+                    <li><strong>Sleeves:</strong> Heavy Embroidered Dhanak Sleeves</li>
+                    <li><strong>Dupatta:</strong> Dhanak Heavy Embroidery Dupatta with 4-Sided borders (Ready to wear stitched)</li>
+                    <li><strong>Trouser:</strong> Dyed Pure Dhanak Plain Trouser</li>
+                    <li><strong>Patches:</strong> Daman & Neck heavy embroidery patches on premium Organza</li>
