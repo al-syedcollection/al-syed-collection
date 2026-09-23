@@ -3,369 +3,130 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AL-SYED COLLECTION | Premium Clothing Brand</title>
+<title>Al-Syed Collection | Premium Clothing</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 <style>
-  /* Reset and base styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
   body {
-    background: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #fff;
     color: #333;
-    line-height: 1.6;
-    padding-bottom: 60px;
   }
-
-  /* HEADER */
+  /* Header */
   header {
-    background: #fff;
-    padding: 30px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    text-align: center;
-  }
-
-  .logo-title {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #222;
-  }
-
-  .tagline {
-    font-size: 14px;
-    color: #555;
-    margin-top: 8px;
-  }
-
-  /* Container */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  /* Collection Title */
-  .collection-title {
-    text-align: center;
-    font-size: 28px;
-    margin: 50px 0 30px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-
-  .collection-title::after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 60px;
-    background-color: #222;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-
-  /* Product Card */
-  .product-row {
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    margin-bottom: 50px;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .product-row:hover {
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-  }
-
-  /* Left Image Section */
-  .row-left {
-    flex: 1;
-    min-width: 300px;
-    max-width: 520px;
-    padding: 20px;
-    background: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-img {
-    width: 100%;
-    max-height: 650px;
-    object-fit: contain;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  .main-img:hover {
-    transform: scale(1.02);
-  }
-
-  .thumb-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-    justify-content: center;
-  }
-
-  .thumb-container img {
-    width: 70px;
-    height: 80px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .thumb-container img:hover {
-    border-color: #222;
-    transform: scale(1.05);
-  }
-
-  /* Right Details Section */
-  .row-right {
-    flex: 1;
-    min-width: 300px;
-    max-width: 580px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .badge {
-    background-color: #222;
+    background: #000;
     color: #fff;
-    padding: 8px 14px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 30px;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 12px;
-    text-transform: uppercase;
+    padding: 30px 20px;
+    text-align: center;
   }
-
-  h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    color: #111;
-    line-height: 1.4;
+  header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
   }
-
-  .item-code {
-    color: #777;
-    font-size: 14px;
+  /* Hero Section */
+  .hero {
+    background: url('your-hero-image.jpg') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .hero h2 {
+    font-size: 3em;
     margin-bottom: 20px;
   }
-
-  .details-list {
-    list-style: none;
-    padding-left: 20px;
-    margin-bottom: 30px;
-  }
-
-  .details-list li {
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 15px;
-  }
-
-  .details-list li::before {
-    content: '•';
-    color: #222;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  /* Price Section */
-  .price-section {
-    margin-bottom: 30px;
-  }
-
-  .new-price {
-    font-size: 30px;
-    font-weight: bold;
-    color: #c0392b;
-  }
-
-  .wholesale-tag {
-    font-size: 12px;
-    color: #27ae60;
-    margin-left: 8px;
-    font-weight: bold;
-  }
-
-  /* WhatsApp Button */
-  .btn-wa-large {
-    display: inline-block;
-    background-color: #25D366;
+  .btn {
+    background: #c0392b;
+    padding: 15px 30px;
     color: #fff;
-    padding: 14px 25px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s;
   }
-
-  .btn-wa-large:hover {
-    background-color: #1ebe5d;
-    transform: translateY(-2px);
+  .btn:hover {
+    background: #e74c3c;
   }
-
-  /* Responsive adjustments */
+  /* Collections Section */
+  .collections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  .collection-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .collection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .collection-card img {
+    width: 100%;
+    height: auto;
+  }
+  .collection-card h3 {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+  /* Footer */
+  footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  /* Responsive */
   @media(max-width:768px){
-    .product-row {
+    .collections {
       flex-direction: column;
-    }
-    .row-left, .row-right {
-      max-width: 100%;
-    }
-    .thumb-container {
-      justify-content: center;
+      align-items: center;
     }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-    <div class="logo-title">Al-Syed Collection</div>
-    <div class="tagline">Premium Clothing Brand | Exclusive Winter Collection</div>
+  <h1>Al-Syed Collection</h1>
 </header>
 
-<div class="container">
-
-<!-- =========================
-     ONLY SELECTED PRODUCTS
-============================= -->
-
-<!-- =========================
-     PRODUCT 1 - BAREEZE 2723 CREAM
-============================= -->
-<div class="product-row">
-
-    <!-- LEFT -->
-    <div class="row-left">
-        <img
-            id="main-cream"
-            src="4648894f-50c5-443b-a104-1581feac774e.jpg"
-            class="main-img"
-            alt="Bareeze 2723 Luxury Cream"
-        >
-        <div class="thumb-container">
-            <img src="4648894f-50c5-443b-a104-1581feac774e.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Model">
-            <img src="2d21bbd4-d95a-49b9-b68c-f645e5e2b4a5.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Unstitched">
-            <img src="7c37f6ec-b24f-4728-823a-85fae43853f0.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Detail">
-            <img src="a117a04a-b3e1-44fc-b63d-51b8478866cb.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Fabric">
-            <img src="aab82fc0-7fd1-4243-9fdf-155fbd4e97bd.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Laces">
-        </div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="row-right">
-        <span class="badge">Premium Airjet Dhanak</span>
-        <h3>Bareeze Embroidered 3-Piece Suit (Luxury Cream)</h3>
-        <div class="item-code">Article Code: Bareeze 2723</div>
-        <ul class="details-list">
-            <li><strong>Stuff:</strong> Best Quality Pure Airjet Dhanak (Full Procedure)</li>
-            <li><strong>Shirt:</strong> Front Full Heavy Embroidered with Fine Premium Thread Work</li>
-            <li><strong>Sleeves:</strong> Heavy Embroidered Dhanak Sleeves</li>
-            <li><strong>Dupatta:</strong> Dhanak Heavy Embroidery Dupatta with 4-Sided Borders (Ready to Wear Stitched)</li>
-            <li><strong>Trouser:</strong> Dyed Pure Dhanak Plain Trouser</li>
-            <li><strong>Patches:</strong> Daman &amp; Neck Heavy Embroidery Patches on Premium Organza</li>
-            <li>Premium Quality Product with Original Catalog &amp; Bag Packing</li>
-            <li><em>After Wash Color &amp; Fabric Guaranteed</em></li>
-        </ul>
-        <div class="price-section">
-            <span class="new-price">Rs. 7,800</span>
-            <span class="wholesale-tag"> (Wholesale Price - Excluded Delivery)</span>
-        </div>
-        <a href="https://wa.me/923252242579?text=Assalam-o-Alaikum%2C%20mujhe%20Bareeze%202723%20Luxury%20Cream%203-Piece%20Suit%20order%20karna%20hai.%20Price%3A%20Rs.%207%2C800" target="_blank" class="btn-wa-large">
-            📱 Order via WhatsApp
-        </a>
-    </div>
-</div>
-
-<!-- =========================
-     PRODUCT 2 - DHANAK MARINA 3PC COLLECTION
-============================= -->
-<section class="dhanak-product">
-    <div class="dhanak-title">
-        <h2>Dhanak Marina 3PC Collection</h2>
-        <p>Premium Winter Collection • Al-Syed Collection</p>
-    </div>
-    <div class="dhanak-content">
-        <!-- Images -->
-        <div>
-            <img id="dhanakMainImage" src="dhanak-1.jpg" alt="Dhanak Marina 3PC Collection" class="dhanak-main-image" />
-            <div class="dhanak-gallery">
-                <img src="dhanak-1.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 1" />
-                <img src="dhanak-2.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 2" />
-                <img src="dhanak-3.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 3" />
-                <img src="dhanak-4.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 4" />
-                <img src="dhanak-5.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 5" />
-                <img src="dhanak-6.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 6" />
-                <img src="dhanak-7.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 7" />
-                <img src="dhanak-8.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 8" />
-                <img src="dhanak-9.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 9" />
-                <img src="dhanak-10.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 10" />
-                <img src="dhanak-11.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 11" />
-                <img src="dhanak-12.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 12" />
-            </div>
-        </div>
-        <!-- Details -->
-        <div class="dhanak-details">
-            <span class="dhanak-badge">DHANAK MARINA • 3PC</span>
-            <h3>Dhanak Marina 3PC Collection</h3>
-            <p class="dhanak-subtitle">Elegant • Premium • Winter Collection</p>
-            <ul>
-                <li><strong>Shirt:</strong> Dyed Dhanak Shirt</li>
-                <li><strong>Trouser:</strong> Dyed Dhanak Trouser</li>
-                <li><strong>Shawl:</strong> Premium Quality Jacquard Pashmina Wool 3D Shawl</li>
-                <li><strong>Quality:</strong> Guaranteed Stuff 💯</li>
-                <li><strong>Collection:</strong> Dhanak Marina</li>
-            </ul>
-            <div class="dhanak-price">
-                <small>Discounted Price</small>
-                <strong>Rs. 3,459/-</strong>
-            </div>
-            <a href="https://wa.me/923252242579?text=Assalam-o-Alaikum%2C%20mujhe%20Dhanak%20Marina%203PC%20Collection%20order%20karna%20hai.%20Price%3A%20Rs.%203%2C459%2F-" target="_blank" class="dhanak-order">
-                📱 Order on WhatsApp
-            </a>
-        </div>
-    </div>
+<section class="hero">
+  <div>
+    <h2>Exclusive Winter Collection 2026/27</h2>
+    <a href="#collections" class="btn">Shop Now</a>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<section id="collections" class="collections">
+  <div class="collection-card">
+    <img src="your-product1.jpg" alt="Product 1" />
+    <h3>Luxury Embroidered 3-Piece Suit</h3>
+    <p>Rs. 7,800 | Wholesale Price - Excluded Delivery</p>
+    <a href="whatsapp-link" class="btn">Order via WhatsApp</a>
+  </div>
+  <div class="collection-card">
+    <img src="your-product2.jpg" alt="Product 2" />
+    <h3>Dhanak Marina 3PC Collection</h3>
+    <p>Rs. 3,459 | Discounted Price</p>
+    <a href="whatsapp-link" class="btn">Order on WhatsApp</a>
+  </div>
+  <!-- Add more products similarly -->
+</section>
+
 <footer>
-  © 2026 Al-Syed Collection. All Rights Reserved.
+  &copy; 2026 Al-Syed Collection. All Rights Reserved.
 </footer>
 
-<!-- JavaScript -->
-<script>
-  function changeImage(imageId, imageSource) {
-    const mainImage = document.getElementById(imageId);
-    if (mainImage) {
-      mainImage.src = imageSource;
-    }
-  }
-  function changeDhanakImage(imageSource) {
-    document.getElementById("dhanakMainImage").src = imageSource;
-  }
-</script>
 </body>
 </html>
