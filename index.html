@@ -1,6 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AL-SYED COLLECTION | Premium Clothing Brand</title>
+<style>
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: #fff;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  .logo-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #222;
+  }
+
+  .tagline {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* Collection Title */
+  .collection-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 50px 0 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+
+  .collection-title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: #222;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  /* Product Card */
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .product-row:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  }
+
+  /* Left Image Section */
+  .row-left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 520px;
+    padding: 20px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .main-img:hover {
+    transform: scale(1.02);
+  }
+
+  .thumb-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .thumb-container img {
+    width: 70px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .thumb-container img:hover {
+    border-color: #222;
+    transform: scale(1.05);
+  }
+
+  /* Right Details Section */
+  .row-right {
+    flex: 1;
+    min-width: 300px;
+    max-width: 580px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .badge {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #111;
+    line-height: 1.4;
+  }
+
+  .item-code {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .details-list {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .details-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+  }
+
+  .details-list li::before {
+    content: '•';
+    color: #222;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* Price Section */
+  .price-section {
+    margin-bottom: 30px;
+  }
+
+  .new-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #c0392b;
+  }
+
+  .wholesale-tag {
+    font-size: 12px;
+    color: #27ae60;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+
+  /* WhatsApp Button */
+  .btn-wa-large {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .btn-wa-large:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+  }
+
+  /* Responsive adjustments */
+  @media(max-width:768px){
+    .product-row {
+      flex-direction: column;
+    }
+    .row-left, .row-right {
+      max-width: 100%;
+    }
+    .thumb-container {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo-title">Al-Syed Collection</div>
+    <div class="tagline">Premium Clothing Brand | Exclusive Winter Collection</div>
+</header>
+
 <div class="container">
 
-<!-- ======== Baqi Product 1 - BAREEZE 2723 CREAM ======== -->
+<!-- =========================
+     ONLY SELECTED PRODUCTS
+============================= -->
+
+<!-- =========================
+     PRODUCT 1 - BAREEZE 2723 CREAM
+============================= -->
 <div class="product-row">
 
     <!-- LEFT -->
@@ -12,45 +267,19 @@
             alt="Bareeze 2723 Luxury Cream"
         >
         <div class="thumb-container">
-            <img
-                src="4648894f-50c5-443b-a104-1581feac774e.jpg"
-                onclick="changeImage('main-cream', this.src)"
-                alt="Cream Model"
-            >
-            <img
-                src="2d21bbd4-d95a-49b9-b68c-f645e5e2b4a5.jpg"
-                onclick="changeImage('main-cream', this.src)"
-                alt="Cream Unstitched"
-            >
-            <img
-                src="7c37f6ec-b24f-4728-823a-85fae43853f0.jpg"
-                onclick="changeImage('main-cream', this.src)"
-                alt="Cream Detail"
-            >
-            <img
-                src="a117a04a-b3e1-44fc-b63d-51b8478866cb.jpg"
-                onclick="changeImage('main-cream', this.src)"
-                alt="Cream Fabric"
-            >
-            <img
-                src="aab82fc0-7fd1-4243-9fdf-155fbd4e97bd.jpg"
-                onclick="changeImage('main-cream', this.src)"
-                alt="Cream Laces"
-            >
+            <img src="4648894f-50c5-443b-a104-1581feac774e.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Model">
+            <img src="2d21bbd4-d95a-49b9-b68c-f645e5e2b4a5.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Unstitched">
+            <img src="7c37f6ec-b24f-4728-823a-85fae43853f0.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Detail">
+            <img src="a117a04a-b3e1-44fc-b63d-51b8478866cb.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Fabric">
+            <img src="aab82fc0-7fd1-4243-9fdf-155fbd4e97bd.jpg" onclick="changeImage('main-cream', this.src)" alt="Cream Laces">
         </div>
     </div>
 
     <!-- RIGHT -->
     <div class="row-right">
-        <span class="badge">
-            Premium Airjet Dhanak
-        </span>
-        <h3>
-            Bareeze Embroidered 3-Piece Suit (Luxury Cream)
-        </h3>
-        <div class="item-code">
-            Article Code: Bareeze 2723
-        </div>
+        <span class="badge">Premium Airjet Dhanak</span>
+        <h3>Bareeze Embroidered 3-Piece Suit (Luxury Cream)</h3>
+        <div class="item-code">Article Code: Bareeze 2723</div>
         <ul class="details-list">
             <li><strong>Stuff:</strong> Best Quality Pure Airjet Dhanak (Full Procedure)</li>
             <li><strong>Shirt:</strong> Front Full Heavy Embroidered with Fine Premium Thread Work</li>
@@ -65,47 +294,40 @@
             <span class="new-price">Rs. 7,800</span>
             <span class="wholesale-tag"> (Wholesale Price - Excluded Delivery)</span>
         </div>
-        <a
-            href="https://wa.me/923252242579?text=Assalam-o-Alaikum%2C%20mujhe%20Bareeze%202723%20Luxury%20Cream%203-Piece%20Suit%20order%20karna%20hai.%20Price%3A%20Rs.%207%2C800"
-            target="_blank"
-            class="btn-wa-large"
-        >
+        <a href="https://wa.me/923252242579?text=Assalam-o-Alaikum%2C%20mujhe%20Bareeze%202723%20Luxury%20Cream%203-Piece%20Suit%20order%20karna%20hai.%20Price%3A%20Rs.%207%2C800" target="_blank" class="btn-wa-large">
             📱 Order via WhatsApp
         </a>
     </div>
 </div>
 
-<!-- ======== Baqi Product 2 - DHANAK MARINA 3PC COLLECTION ======== -->
+<!-- =========================
+     PRODUCT 2 - DHANAK MARINA 3PC COLLECTION
+============================= -->
 <section class="dhanak-product">
     <div class="dhanak-title">
         <h2>Dhanak Marina 3PC Collection</h2>
         <p>Premium Winter Collection • Al-Syed Collection</p>
     </div>
     <div class="dhanak-content">
-        <!-- IMAGES -->
+        <!-- Images -->
         <div>
-            <img
-                id="dhanakMainImage"
-                src="dhanak-1.jpg"
-                alt="Dhanak Marina 3PC Collection"
-                class="dhanak-main-image"
-            >
+            <img id="dhanakMainImage" src="dhanak-1.jpg" alt="Dhanak Marina 3PC Collection" class="dhanak-main-image" />
             <div class="dhanak-gallery">
-                <img src="dhanak-1.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 1">
-                <img src="dhanak-2.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 2">
-                <img src="dhanak-3.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 3">
-                <img src="dhanak-4.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 4">
-                <img src="dhanak-5.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 5">
-                <img src="dhanak-6.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 6">
-                <img src="dhanak-7.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 7">
-                <img src="dhanak-8.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 8">
-                <img src="dhanak-9.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 9">
-                <img src="dhanak-10.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 10">
-                <img src="dhanak-11.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 11">
-                <img src="dhanak-12.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 12">
+                <img src="dhanak-1.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 1" />
+                <img src="dhanak-2.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 2" />
+                <img src="dhanak-3.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 3" />
+                <img src="dhanak-4.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 4" />
+                <img src="dhanak-5.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 5" />
+                <img src="dhanak-6.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 6" />
+                <img src="dhanak-7.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 7" />
+                <img src="dhanak-8.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 8" />
+                <img src="dhanak-9.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 9" />
+                <img src="dhanak-10.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 10" />
+                <img src="dhanak-11.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 11" />
+                <img src="dhanak-12.jpg" onclick="changeDhanakImage(this.src)" alt="Dhanak 12" />
             </div>
         </div>
-        <!-- DETAILS -->
+        <!-- Details -->
         <div class="dhanak-details">
             <span class="dhanak-badge">DHANAK MARINA • 3PC</span>
             <h3>Dhanak Marina 3PC Collection</h3>
@@ -121,16 +343,29 @@
                 <small>Discounted Price</small>
                 <strong>Rs. 3,459/-</strong>
             </div>
-            <a
-                href="https://wa.me/923252242579?text=Assalam-o-Alaikum%2C%20mujhe%20Dhanak%20Marina%203PC%20Collection%20order%20karna%20hai.%20Price%3A%20Rs.%203%2C459%2F-"
-                target="_blank"
-                class="dhanak-order"
-            >
+            <a href="https://wa.me/923252242579?text=Assalam-o-Alaikum%2C%20mujhe%20Dhanak%20Marina%203PC%20Collection%20order%20karna%20hai.%20Price%3A%20Rs.%203%2C459%2F-" target="_blank" class="dhanak-order">
                 📱 Order on WhatsApp
             </a>
         </div>
     </div>
 </section>
 
-<!-- Baqi products ko hata diya gaya -->
-</div>
+<!-- FOOTER -->
+<footer>
+  © 2026 Al-Syed Collection. All Rights Reserved.
+</footer>
+
+<!-- JavaScript -->
+<script>
+  function changeImage(imageId, imageSource) {
+    const mainImage = document.getElementById(imageId);
+    if (mainImage) {
+      mainImage.src = imageSource;
+    }
+  }
+  function changeDhanakImage(imageSource) {
+    document.getElementById("dhanakMainImage").src = imageSource;
+  }
+</script>
+</body>
+</html>
